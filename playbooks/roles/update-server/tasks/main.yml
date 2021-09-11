@@ -1,0 +1,22 @@
+---
+- name: shell | install - Update apt
+  shell: apt update
+  become: true
+
+- name: shell | install - Upgrade apt
+  shell: apt upgrade -y
+  become: true
+
+- name: apt | install - requirements
+  apt:
+    pkg:
+    - apt-transport-https
+    - ca-certificates
+    - nano
+    - vim
+    - lsb-release
+    - nmap
+    - git
+    - inetutils-ping
+    state: present
+  become: true
