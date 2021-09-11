@@ -1,4 +1,0 @@
----
-- hosts: monolith_node
-  roles:
-    - role: web
